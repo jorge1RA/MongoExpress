@@ -26,7 +26,7 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: jorgecontrasena
       ME_CONFIG_BASICAUTH_USERNAME: jorge
       ME_CONFIG_BASICAUTH_PASSWORD: jorgecontrasena
-      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_MONGODB_SERVER: mongo_db
 
 networks:
   my-network:
