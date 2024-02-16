@@ -9,8 +9,7 @@ services:
     networks:
       - my-network
     environment:
-      MONGO_INITDB_ROOT_USERNAME: jorge
-      MONGO_INITDB_ROOT_PASSWORD: jorgecontrasena
+      MYSQL_ROOT_PASSWORD: root
 
   mongo-express:
     image: mongo-express
@@ -22,17 +21,15 @@ services:
     networks:
       - my-network
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: jorge
-      ME_CONFIG_MONGODB_ADMINPASSWORD: jorgecontrasena
-      ME_CONFIG_BASICAUTH_USERNAME: jorge
-      ME_CONFIG_BASICAUTH_PASSWORD: jorgecontrasena
-      ME_CONFIG_MONGODB_SERVER: mongodb
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: jorge
+      MYSQL_PASSWORD: jorgecontrasena
 
 networks:
   my-network:
 
 volumes:
   mongo-data:
-
 
 
